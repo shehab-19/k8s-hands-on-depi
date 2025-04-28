@@ -20,6 +20,11 @@ spec:
         env:
         - name: name
           value: "shehab"
+        - name: age 
+          valueFrom:
+              configMapKeyRef:
+                name: myconfigmap
+                key: my-nice-age
         ports:
         - containerPort: 80
         command : ["sleep", "3600"]
